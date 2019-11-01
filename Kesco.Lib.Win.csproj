@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B40FE2D-9949-4151-BE04-7A17B522FF04}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Win</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Kesco.Lib.Win</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\_Application\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\_Application\</OutputPath>
+    <BaseIntermediateOutputPath>..\_Obj\Win\</BaseIntermediateOutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseWithAdvancedLogging|AnyCPU'">
+    <OutputPath>bin\ReleaseWithAdvancedLogging\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;AdvancedLogging</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>false</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>..\_Release\Win.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting">
+      <Name>System.Runtime.Remoting</Name>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmployeeDialog\EmployeeDialog.ru.resx">
+      <DependentUpon>EmployeeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmployeeFindDialog.ru.resx">
+      <DependentUpon>EmployeeFindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmployeeSelect.ru.resx">
+      <DependentUpon>EmployeeSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmpSearchBlock.ru.resx">
+      <DependentUpon>EmpSearchBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxScrollable.ru.resx">
+      <DependentUpon>MessageBoxScrollable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opinion\OpinionControl.resx">
+      <DependentUpon>OpinionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\ContactDialog.et.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\ContactDialog.ru.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\UserDialog.ru.resx">
+      <DependentUpon>UserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AsyncUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AsyncUserControl.Designer.cs">
+      <DependentUpon>AsyncUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataConn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DesignerDetector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DialogEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DialogResultEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTree\DTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DTree\DTreeFindDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DTree\DTreeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmployeeDialog\EmployeeData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmployeeDialog\EmployeeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDialog\EmployeeFindDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeDialog\EmployeeParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmployeeDialog\EmployeeSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeDialog\EmpSearchBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeDialog\ListItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmployeeDialog\PhoneList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeDialog\PlaceListItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HookClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MessageBoxScrollable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxScrollable.Designer.cs">
+      <DependentUpon>MessageBoxScrollable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opinion\OpinionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Opinion\OpinionControl.Designer.cs">
+      <DependentUpon>OpinionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Replacer.cs" />
+    <Compile Include="UpDownTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web\ContactDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Web\Cookie.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\CookieCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\Decoder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\DocsLinksCreateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Web\ExtendedBrowserControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web\NativeMethods.cs" />
+    <Compile Include="Web\PersonDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Web\UnsafeNativeMethods.cs" />
+    <Compile Include="Web\UrlBrowseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Web\UserContactInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Web\UserDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="DTree\DTreeFindDialog.resx">
+      <DependentUpon>DTreeFindDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmployeeDialog.en.resx">
+      <DependentUpon>EmployeeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmployeeDialog.et.resx">
+      <DependentUpon>EmployeeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmployeeDialog.resx">
+      <DependentUpon>EmployeeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmployeeFindDialog.en.resx">
+      <DependentUpon>EmployeeFindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmployeeFindDialog.et.resx">
+      <DependentUpon>EmployeeFindDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmployeeFindDialog.resx">
+      <DependentUpon>EmployeeFindDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmployeeSelect.en.resx">
+      <DependentUpon>EmployeeSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmployeeSelect.et.resx">
+      <DependentUpon>EmployeeSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmployeeSelect.resx">
+      <DependentUpon>EmployeeSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmpSearchBlock.en.resx">
+      <DependentUpon>EmpSearchBlock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmpSearchBlock.et.resx">
+      <DependentUpon>EmpSearchBlock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\EmpSearchBlock.resx">
+      <DependentUpon>EmpSearchBlock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeDialog\PhoneList.resx">
+      <DependentUpon>PhoneList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FreeDialog.resx">
+      <DependentUpon>FreeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxScrollable.en.resx">
+      <DependentUpon>MessageBoxScrollable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxScrollable.et.resx">
+      <DependentUpon>MessageBoxScrollable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxScrollable.resx">
+      <DependentUpon>MessageBoxScrollable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\ContactDialog.en.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\ContactDialog.resx">
+      <DependentUpon>ContactDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\DocsLinksCreateDialog.en.resx">
+      <DependentUpon>DocsLinksCreateDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\DocsLinksCreateDialog.et.resx">
+      <DependentUpon>DocsLinksCreateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\DocsLinksCreateDialog.resx">
+      <DependentUpon>DocsLinksCreateDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\DocsLinksCreateDialog.ru.resx">
+      <DependentUpon>DocsLinksCreateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\PersonDialog.en.resx">
+      <DependentUpon>PersonDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\PersonDialog.et.resx">
+      <DependentUpon>PersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\PersonDialog.resx">
+      <DependentUpon>PersonDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\PersonDialog.ru.resx">
+      <DependentUpon>PersonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\UrlBrowseDialog.resx">
+      <DependentUpon>UrlBrowseDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\UserContactInfo.resx">
+      <DependentUpon>UserContactInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\UserDialog.en.resx">
+      <DependentUpon>UserDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\UserDialog.et.resx">
+      <DependentUpon>UserDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Web\UserDialog.resx">
+      <DependentUpon>UserDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Error\Kesco.Lib.Win.Error.csproj">
+      <Project>{A6E0282A-D134-40DD-8EFA-A3F6332B4EDD}</Project>
+      <Name>Kesco.Lib.Win.Error</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Log\Kesco.Lib.Log.csproj">
+      <Project>{FC924B22-160A-4F7F-98EB-63E420DE694E}</Project>
+      <Name>Kesco.Lib.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Options\Kesco.Lib.Win.Options.csproj">
+      <Project>{CBBF95B6-E6B1-4315-A94C-63C6743AA7C8}</Project>
+      <Name>Kesco.Lib.Win.Options</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
