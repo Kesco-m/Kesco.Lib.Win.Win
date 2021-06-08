@@ -15,13 +15,18 @@ namespace Kesco.Lib.Win.Web
 	{
 		private Uri internalUri;
 		private UnsafeNativeMethods.IWebBrowser2 axIWebBrowser2;
+		private WebBrowserEvents browserEvents;
 		private string defPrinter;
 
         private System.Threading.Timer timer;
 
+		public bool NeedEvent = false;
+
 		const int WM_PARENTNOTIFY = 0x210;
 		const int WM_DESTROY = 2;
 		public event EventHandler WBWantsToClose;
+		public event EventHandler PrintCompleted;
+
 
 		private void OnWBWantsToClose()
 		{
@@ -52,7 +57,12 @@ namespace Kesco.Lib.Win.Web
 			}
 		}
 
-        protected override void WndProc(ref System.Windows.Forms.Message m)
+		private void OnPrintCompleted()
+		{
+			PrintCompleted?.DynamicInvoke(this, EventArgs.Empty);
+		}
+
+		protected override void WndProc(ref System.Windows.Forms.Message m)
 		{
 			if(m != null && m.Msg == WM_PARENTNOTIFY)
 			{
@@ -63,16 +73,38 @@ namespace Kesco.Lib.Win.Web
 			base.WndProc(ref m);
 		}
 
+		[PermissionSetAttribute(SecurityAction.LinkDemand, Name = "FullTrust")]
 		protected override void AttachInterfaces(object nativeActiveXObject)
 		{
 			axIWebBrowser2 = (UnsafeNativeMethods.IWebBrowser2)nativeActiveXObject;
 			base.AttachInterfaces(nativeActiveXObject);
 		}
 
+		[PermissionSetAttribute(SecurityAction.LinkDemand, Name = "FullTrust")]
 		protected override void DetachInterfaces()
 		{
 			axIWebBrowser2 = null;
 			base.DetachInterfaces();
+		}
+
+		[PermissionSetAttribute(SecurityAction.LinkDemand, Name = "FullTrust")]
+		protected override void CreateSink()
+		{
+			base.CreateSink();
+			browserEvents = new WebBrowserEvents(this);
+		}
+
+	
+
+		[PermissionSetAttribute(SecurityAction.LinkDemand, Name = "FullTrust")]
+		protected override void DetachSink()
+		{
+			if(browserEvents != null)
+			{
+				browserEvents.Dispose();
+				browserEvents = null;
+			}
+			base.DetachSink();
 		}
 
 		public void ForceNavigate(string url)
@@ -95,16 +127,17 @@ namespace Kesco.Lib.Win.Web
 			{
 				Console.WriteLine("{0}: Start printer change to {1}", DateTime.Now.ToString("HH:mm:ss fff"), printer);
 				SetDefaultPrinter(printer);
+			}
+			if(change || NeedEvent)
+			{
 				eventWatcher.EventArrived += eventWatcher_EventArrived;
 				Console.WriteLine("{0}: Printer changed to {1}", DateTime.Now.ToString("HH:mm:ss fff"), printer);
-			}
-			if(axIWebBrowser2.QueryStatusWB(NativeMethods.OLECMDID.OLECMDID_PRINT) == (NativeMethods.OLECMDF.OLECMDF_SUPPORTED | NativeMethods.OLECMDF.OLECMDF_ENABLED))
-				axIWebBrowser2.ExecWB(NativeMethods.OLECMDID.OLECMDID_PRINT, NativeMethods.OLECMDEXECOPT.OLECMDEXECOPT_DONTPROMPTUSER, ref input, IntPtr.Zero);
-
-			if(change)
-			{
                 timer = new System.Threading.Timer(new System.Threading.TimerCallback(StopManagementEventWatcher), eventWatcher, 5000, -1);
 				eventWatcher.Start();
+			}
+			if(axIWebBrowser2.QueryStatusWB(NativeMethods.OLECMDID.OLECMDID_PRINT) == (NativeMethods.OLECMDF.OLECMDF_SUPPORTED | NativeMethods.OLECMDF.OLECMDF_ENABLED))
+			{
+				axIWebBrowser2.ExecWB(NativeMethods.OLECMDID.OLECMDID_PRINT, NativeMethods.OLECMDEXECOPT.OLECMDEXECOPT_DONTPROMPTUSER, ref input, IntPtr.Zero);
 			}
 		}
 
@@ -138,6 +171,7 @@ namespace Kesco.Lib.Win.Web
 					if(watcher != null)
 					{
 						watcher.Stop();
+						watcher.EventArrived -= eventWatcher_EventArrived;
 						watcher.Dispose();
 						watcher = null;
 					}
@@ -149,6 +183,7 @@ namespace Kesco.Lib.Win.Web
 		{
 			StopManagementEventWatcher(sender);
 			SetDefaultPrinter(defPrinter);
+			OnPrintCompleted();
 		}
 
 		private void SetDefaultPrinter(string PrinterName)

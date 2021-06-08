@@ -772,7 +772,12 @@ namespace Kesco.Lib.Win.Trees
 
             bool ins = (ModifierKeys == Keys.Control);
             if (ConfirmMovingMethod == null || ConfirmMovingMethod(k[2], (nd == null ? "" : nd.Text), ins))
+            {
                 MoveNode(src, dst, ins);
+                OnRefreshNode();
+                RefreshNode(SelectedNode);
+                RefreshSubNodes(SelectedNode);
+            }
 
             if (dond != null)
             {

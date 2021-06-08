@@ -126,7 +126,7 @@ namespace Kesco.Lib.Win.Opinion
 			set
 			{
 				connectionString = value;
-				isConnected = !string.IsNullOrWhiteSpace(connectionString);
+				isConnected = !string.IsNullOrEmpty(connectionString);
 				if(isConnected)
 					isConnected = TestConnection();
 				if(isConnected)
